@@ -1,2 +1,0 @@
-tmpfs /tmp tmpfs noatime,nosuid 0 0
-tmpfs /home/jkoshita/Downloads tmpfs noatime,nosuid 0 0
