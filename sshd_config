@@ -58,7 +58,7 @@ PasswordAuthentication no
 
 # Change to yes to enable challenge-response passwords (beware issues with
 # some PAM modules and threads)
-KbdInteractiveAuthentication yes # macos: no
+KbdInteractiveAuthentication yes
 
 # Kerberos options
 #KerberosAuthentication no
@@ -81,7 +81,7 @@ KbdInteractiveAuthentication yes # macos: no
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and KbdInteractiveAuthentication to 'no'.
-UsePAM yes # macos: no
+UsePAM yes
 
 #AllowAgentForwarding yes
 #AllowTcpForwarding yes
@@ -121,12 +121,12 @@ Subsystem       sftp    /usr/lib/openssh/sftp-server
 #       ForceCommand cvs server
 
 
-ChallengeResponseAuthentication yes # macos: no
+ChallengeResponseAuthentication yes
 Ciphers chacha20-poly1305@openssh.com
 HostKeyAlgorithms ssh-ed25519
 KexAlgorithms curve25519-sha256@libssh.org
 MACs hmac-sha2-512-etm@openssh.com
-AuthenticationMethods publickey,keyboard-interactive:pam # macos: publickey
+AuthenticationMethods publickey,keyboard-interactive:pam
 AllowUsers jkoshita
 
 
@@ -139,8 +139,8 @@ AllowUsers jkoshita
 # sudo rm /etc/ssh/ssh_host_ed*_key*
 # sudo ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ""
 # sudo rm /etc/ssh/ssh_host_ed25519_key.pub
-# ssh-keygen -t ed25519 -a 100 -f ~/.ssh/debian-2.lan
-# cat ~/.ssh/debian-2.lan.pub > ~/.ssh/authorized_keys
+# ssh-keygen -t ed25519 -a 100 -f ~/.ssh/raspberrypi.lan
+# cat ~/.ssh/raspberrypi.lan.pub > ~/.ssh/authorized_keys
 #
 # /etc/pam.d/sshd
 # - @include common-auth
