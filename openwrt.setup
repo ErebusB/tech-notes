@@ -1,5 +1,3 @@
-openwrt setup
-
 opkg update
 opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade
 opkg install vim openssh-sftp-server luci-app-https-dns-proxy luci-app-adblock tcpdump curl ca-bundle kmod-usb-net-ipheth usbmuxd
