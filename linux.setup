@@ -8,29 +8,3 @@ uci -q delete uhttpd.main.listen_https
 uci add_list uhttpd.main.listen_http="127.0.0.1:80"
 uci commit uhttpd
 /etc/init.d/uhttpd restart
-
-
-debian setup:
-
-sudo apt update && sudo apt upgrade
-sudo apt install vim zsh git yaru-theme-gtk yaru-theme-icon yaru-theme-sound fonts-noto xrdp gocryptfs fuse
-(add "contrib" and "deb http://deb.debian.org/debian bookworm-backports main" to /etc/apt/sources.list)
-sudo apt update
-sudo apt install torbrowser-launcher yt-dlp/bookworm-backports
-
-
-raspberrypi setup
-
-sudo apt update && sudo apt upgrade
-sudo apt install vim zsh git wireshark
-
-
-hyper-v setup
-
-in powershell
-Set-VMVideo -VMName debian-vm -ResolutionType maximum -HorizontalResolution:2560  -VerticalResolution:1440
-Set-VMVideo -VMName debian-vm -ResolutionType maximum -HorizontalResolution:1920  -VerticalResolution:1080
-
-in /etc/default/grub
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=Virtual-1:2560x1440"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=Virtual-1:1920x1080"
